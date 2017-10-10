@@ -5,7 +5,7 @@
 $ease: .3s ease-in-out;
 $dark: #54566e;
 
-html, body, h1 {
+html, body, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
@@ -24,6 +24,27 @@ h2 {
   font-size: 3.5rem;
 }
 
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
 ul {
   list-style: none;
 }
@@ -33,13 +54,31 @@ a {
   transition: $ease;
 }
 
+.btn {
+  border: 1px solid $dark;
+  padding: 1rem 1.5rem;
+
+  &:hover {
+    background: $dark;
+    color: #fff;
+  }
+}
+
 // Globals
 .section-padding {
   padding: 6rem 8rem;
+
+  h2 {
+    margin-bottom: 4rem;
+  }
 }
 
 .white {
   color: #fff;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .social-toolbar {
@@ -82,6 +121,82 @@ a {
   }
 }
 
+.table-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.side-padding {
+  padding: 0 2rem;
+}
+
+.callout {
+  background: #eee;
+  width: 24rem;
+  position: relative;
+  margin-bottom: 4rem;
+  transition: $ease;
+  cursor: pointer;
+
+  .content {
+    padding: 2rem .5rem;
+  }
+
+  .tags {
+    position: absolute;
+    top: 17rem;
+    right: 1rem;
+  }
+
+  .tag {
+    color: #fff;
+    background: #576167;
+    margin: .25rem;
+    padding: .5rem;
+  }
+
+  img {
+    max-width: 24rem;
+    height: 20rem;
+  }
+
+  &:hover {
+    transform: scale(1.01);
+  }
+}
+
+.column-callout {
+  height: 24rem;
+  background: #eee;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+
+  .btn {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 5rem;
+  }
+
+  .content {
+    position: absolute;
+    left: 28rem;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  img {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    height: 92%;
+    width: 24rem;
+  }
+}
+
 // Sections
 #landing-banner {
   position: relative;
@@ -94,7 +209,7 @@ a {
     width: 40vw;
   }
 
-  .callout {
+  .landing-callout {
     position: absolute;
     left: 50vw;
     top: 40vh;
@@ -121,11 +236,14 @@ a {
 
 #project-container {
   background: url('../img/denim.png');
-  height: 100vh;
 }
 
 #blog-container {
-  height: 100vh;
+  .btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 5rem;
+  }
 }
 
 #store-container {
@@ -136,4 +254,54 @@ a {
 #footer {
   height: 24vh;
   padding: 4rem 8rem;
+}
+
+#email-container {
+  position: fixed;
+  bottom: -20rem;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1002;
+  background: #fff;
+  transition: $ease;
+
+  .fa-close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+  }
+
+  .email {
+    border: none;
+    border-bottom: 1px solid $dark;
+    width: 24rem;
+    vertical-align: bottom;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .btn {
+    background: #fff;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: $ease;
+
+    &:hover {
+      background: $dark;
+      color: #fff;
+    }
+  }
+
+  form {
+    margin: 2rem 0;
+  }
 }
