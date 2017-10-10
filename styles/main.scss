@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+$ease: .3s ease-in-out;
+$dark: #54566e;
+
+html, body, h1 {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1vw;
+  font-family: 'Quicksand', sans-serif;
+  color: $dark;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: $ease;
+}
+
+// Globals
+.section-padding {
+  padding: 6rem 8rem;
+}
+
+.white {
+  color: #fff;
+}
+
+.social-toolbar {
+  position: fixed;
+  top: 40vh;
+  right: -5rem;
+  z-index: 1001;
+  transition: $ease;
+
+  a {
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: .5rem 1rem .5rem .5rem;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .facebook {
+    background: #3b5998;
+  }
+
+  .insta {
+    color: #000;
+    background: #fff;
+
+    &:hover {
+      background: rgba(0,0,0,.25);
+    }
+  }
+
+  .youtube {
+    background: #cc181e;
+  }
+
+  .etsy {
+    background: #eb6d20;
+  }
+}
+
+// Sections
+#landing-banner {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+
+  .side-img {
+    height: 96vh;
+    width: 40vw;
+  }
+
+  .callout {
+    position: absolute;
+    left: 50vw;
+    top: 40vh;
+  }
+
+  .nav {
+    padding-left: .5rem;
+
+    li {
+      margin: .5rem 0;
+    }
+
+    a {
+      color: $dark;
+      padding: .5rem 1rem;
+
+      &:hover {
+        border-left: .25rem solid #54636e;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+#project-container {
+  background: url('../img/denim.png');
+  height: 100vh;
+}
+
+#blog-container {
+  height: 100vh;
+}
+
+#store-container {
+  height: 60vh;
+  background: url('../img/denim.png');
+}
+
+#footer {
+  height: 24vh;
+  padding: 4rem 8rem;
+}
