@@ -4,12 +4,12 @@ $(function () {
 
   // Fade in email tooltip
   setTimeout(function () {
-    $('#email-container').css('bottom', 0);
+    $('#popup-container').css('bottom', 0);
   }, 2000);
 
   // Close email tooltip
   $('.fa-close').on('click', function () {
-    $('#email-container').css('bottom', '-20rem');
+    $('#popup-container').css('bottom', '-20rem');
   })
 
   // truncate blog paragraph
@@ -36,5 +36,29 @@ $(function () {
             return false;
         }
     }
+  });
+
+  // Ajax
+  $('#signup').submit(function(e) {
+    e.preventDefault();
+    $("#message").html("Adding your email address...");
+      $.ajax({
+        url: 'store-address.php', // proper url to your "store-address.php" file
+        type: 'POST', // <- IMPORTANT
+        data: $('#signup').serialize() + '&ajax=true',
+        success: function(msg) {
+            var message = $.parseJSON(msg),
+                result = '';
+            if (message.status === 'subscribed') { // success
+                result = 'Success! Thanks for signing up!';
+                $('#message').css('color', '#333');
+            } else { // error
+                result = 'Error: ' + message.detail;
+                $('#message').css('color', 'red');
+            }
+            $('#message').html(result); // display the message
+        }
+    });
+    return false;
   });
 })

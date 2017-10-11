@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81003885-11"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-81003885-11');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1657847335923627",
+        enable_page_level_ads: true
+      });
+    </script>
+
     <meta charset="utf-8">
     <title>Apartment DIY</title>
     <link rel="icon" type="image/png" href="./img/favicon.png">
@@ -16,16 +33,9 @@
       <a class="etsy"  href="#"><i class="fa fa-etsy" aria-hidden="true"></i></a>
     </div>
 
-    <div id="email-container">
+    <div id="popup-container">
       <i class="fa fa-close"></i>
-      <p>Apartment DIY is still in its early stages. Thanks for all the support and be sure to sign up for the email list.</p>
-
-      <div class="email-toolbox">
-        <form class="" action="index.html" method="post">
-          <input class="email" type="email" name="" value="">
-          <input class="btn" type="submit" value="sign up">
-        </form>
-      </div>
+      <p>Apartment DIY is still in its early stages. Thanks for all the support and be sure to <a href="#footer">sign up</a> for the email list.</p>
     </div>
 
     <section id="landing-banner">
@@ -98,13 +108,24 @@
           </div>
         </div>
       </div>
+
+      <div class="center-text">
+        <a class="btn" href="#">View All</a>
+      </div>
+
+      <div class="table-row side-padding margin-top">
+        <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=9&l=ez&f=ifr&linkID=4fb610fcc00d6e962bb9dd37705c0f61&t=apartmentdiy-20&tracking_id=apartmentdiy-20" width="180" height="150" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+        <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=9&l=ez&f=ifr&linkID=4fb610fcc00d6e962bb9dd37705c0f61&t=apartmentdiy-20&tracking_id=apartmentdiy-20" width="180" height="150" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+        <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=9&l=ez&f=ifr&linkID=4fb610fcc00d6e962bb9dd37705c0f61&t=apartmentdiy-20&tracking_id=apartmentdiy-20" width="180" height="150" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+        <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=9&l=ez&f=ifr&linkID=4fb610fcc00d6e962bb9dd37705c0f61&t=apartmentdiy-20&tracking_id=apartmentdiy-20" width="180" height="150" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+      </div>
     </section>
 
     <section id="blog-container" class="section-padding">
       <h2>blog</h2>
 
       <div class="column-callout">
-        <img src="./img/pipe-cutter.jpg" alt="">
+        <a href="./blog/how-to-cut-copper-pipe.html"><img src="./img/pipe-cutter.jpg" alt=""></a>
 
         <div class="content">
           <h5>How to Cut Copper Pipe (with a pipe cutter)</h5>
@@ -150,6 +171,15 @@
   </body>
 
   <footer id="footer">
+    <div class="email-toolbox">
+      <h5>sign up for the newsletter:</h5>
+      <form id="signup" action="index.html" method="get">
+        <input class="email" type="email" name="email" value="">
+        <input class="btn" type="submit" value="sign up">
+      </form>
+      <div id="message"></div>
+    </div>
+
     Apartment DIY. Copyright (c) 2017 Copyright Holder All Rights Reserved.
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="scripts/main.js" charset="utf-8"></script>
